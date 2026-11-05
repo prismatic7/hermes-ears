@@ -1,0 +1,36 @@
+manifest_version: 2
+name: hermes-ears
+label: Hermes Ears
+kind: standalone
+version: "0.1.0"
+author: Chris Wenn
+homepage: https://github.com/techne-tools/hermes-ears
+license: MIT
+description: "A listening engine: measure an audio file, then state only what the measurements carry — claims name their evidence, and blind spots are always listed."
+requires_hermes: ">=0.21.5"
+platforms: [macos, linux]
+tags: [audio, listening, analysis, sound-design, evidence]
+python_dependencies:
+  - "numpy>=1.24,<3"
+provides_tools:
+  - ears_listen
+provides_hooks: []
+provides_middleware: []
+requires_env: []
+system_dependencies:
+  - ffmpeg
+  - ffprobe
+config_schema:
+  sample_rate:
+    type: int
+    default: 48000
+    description: >
+      Sample rate the engine decodes to before measuring. 48 kHz keeps the
+      octave-band analysis honest up to 16 kHz and matches most playback
+      systems; changing it changes every spectral figure.
+  silence_floor_db:
+    type: float
+    default: -50.0
+    description: >
+      Frame level below which audio counts as silence when detecting gaps and
+      sparse events.

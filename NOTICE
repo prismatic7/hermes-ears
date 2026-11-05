@@ -1,0 +1,36 @@
+# NOTICE
+
+## AKOÚŌ — method lineage
+
+This engine's discipline — separating a claim from the evidence for it, and making an instrument
+state its own limits before it is trusted — follows **AKOÚŌ**, the listening framework by
+
+- **Author:** emeisazam (eme) — https://github.com/emeisazam
+- **Organisation:** Sonic Field Labs — https://github.com/sonicfieldlabs
+- **Repository:** https://github.com/sonicfieldlabs/akouo
+- **Licence:** MIT — Copyright (c) 2026 akoúō contributors
+
+No files, text, schemas, presets or mode definitions from AKOÚŌ are redistributed in this
+repository. The measurement passes here are named after the measurement each one performs
+(`levels`, `spectrum`, `timing`, `space`) and are implemented independently. The debt is
+methodological and is recorded rather than embedded: the framework's own vocabulary and materials
+belong to its authors and should be read there.
+
+Where AKOÚŌ and this plugin are used together, cite both: the framework for its listening
+discipline, this plugin for these measurements.
+
+## System tools
+
+`ffmpeg` and `ffprobe` are invoked as separate executables through `subprocess`, with a fixed
+argument vector and no shell interpolation. Executing a program is not linking it, so their
+GPL/LGPL terms do not extend to this plugin's code. They are declared as system dependencies and
+invoked with a path the user supplies.
+
+## Python dependencies
+
+`numpy` (BSD-3-Clause), declared in `plugin.yaml` and installed by the plugin manager.
+
+## MASA
+
+Not used by this plugin. The companion adapter for MASA records lives in the AKOÚŌ integration
+repository, where its attribution to Sonic Field Labs is recorded.

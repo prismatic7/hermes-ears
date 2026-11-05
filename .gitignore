@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+*.wav
+*.aiff
+*.aif
+*.mp3
+*.flac
+*.m4a
+# test and demo output
+out/
+demo/
+SUBMISSION.md
